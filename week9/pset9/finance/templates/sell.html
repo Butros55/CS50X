@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quotes
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post" class="center-block">
+        <div class="row d-flex justify-content-center">
+
+            <label for="symbol" class="sr-only">Symbol of Company</label>
+            <select name="symbol" style="width: 386px" class="form-control">
+                {% for i in range(len) %}
+                <option value={{ value[i]["stock"] }}>{{ value[i]["stock"] }}</option>
+                {% endfor %}
+            </select>
+            <label for="shares" class="sr-only">Amount of Stocks</label>
+            <input type="text" class="form-control" id="stocks" name="shares" placeholder="Number of Shares">
+
+            <button type="submit" class="btn btn-primary mb-2">Sell!</button>
+        </div>
+    </form>
+{% endblock %}

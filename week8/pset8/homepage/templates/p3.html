@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div position="fixed" top="500px">
+        <h1 class="texta">Try to Find the Duck on the Website!</h1>
+        <h2 id="found"></h2>
+    </div>
+    <p class="bottomright">Created by Geret Wessling</p>
+    <p></p>
+    <img id="duck" class="imgtrans" src="https://cdn.shopify.com/s/files/1/0084/9282/products/Webp.net-resizeimage_2.png?v=1570638297" width="50" onclick="document.querySelector('#found').innerHTML = 'You Found the Duck Great Work!'">
+
+{% endblock %}

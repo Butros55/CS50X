@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div>
+    <h2>The Stocks found from {{ symbol }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.price | usd}}</td>
+                <td>{{ stock.symbol }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

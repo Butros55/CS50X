@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <h2>History of Purchase/Sells</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transaction</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(len) %}
+            <tr>
+                <td>{{ stock[i]["stocks"] }}</td>
+                <td>{{ stock[i]["shares"] }}</td>
+                <td>{{ stock[i]["price"] | usd}}</td>
+                <td>{{ stock[i]["trans"] }}</td>
+                <td>{{ stock[i]["timestamp"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

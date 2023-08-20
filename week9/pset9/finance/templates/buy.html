@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quotes
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post" class="center-block">
+        <div class="row d-flex justify-content-center">
+
+            <label for="quote" class="sr-only">Symbol of Company</label>
+            <input type="text" class="form-control" id="quote" name="symbol" placeholder="Symbol">
+
+            <label for="shares" class="sr-only">Amount of Stocks</label>
+            <input type="text" class="form-control" id="stocks" name="shares" placeholder="Number of Shares">
+
+            <button type="submit" class="btn btn-primary mb-2">Buy!</button>
+        </div>
+    </form>
+{% endblock %}

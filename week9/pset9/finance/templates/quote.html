@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quotes
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post" class="center-block">
+        <div class="row d-flex justify-content-center">
+            <label for="quote" class="sr-only">Search</label>
+            <input type="text" class="form-control" id="quote" name="symbol" placeholder="Symbol">
+            <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+        </div>
+    </form>
+{% endblock %}
